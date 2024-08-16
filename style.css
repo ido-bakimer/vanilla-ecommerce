@@ -14,7 +14,8 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 100px;
+        align-items: center;
+        /* height: 100px; */
         background-color: cadetblue;
         #navbar{
             display: flex;
@@ -24,6 +25,10 @@ body{
             margin: auto 0;
             gap: 20px;
             background-color: indianred;}
+    }
+    .icon-large{
+        height: 150px;
+        margin: -25px;
     }
 }
 
