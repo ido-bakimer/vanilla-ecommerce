@@ -10,6 +10,26 @@
 }
 
 body{
+    #header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+        background-color: cadetblue;
+        #navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto 0;
+            gap: 20px;
+            background-color: indianred;}
+    }
+}
+
+/* general styling */
+
+body{
     height: 100%;
     width: 100%;
 }
