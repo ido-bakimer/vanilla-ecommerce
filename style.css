@@ -58,15 +58,34 @@ body {
                     }
                 }
             }
+            .active-tab{
+                filter: brightness(0) saturate(100%) invert(34%) sepia(49%) saturate(5431%) hue-rotate(2deg) brightness(102%) contrast(103%);
+                img {
+                    border-bottom: solid 2px #1a1a1a;
+                    &:hover {
+                        border-bottom: solid 2px #1a1a1a;
+                        opacity: 0.75;
+                    }
+                }
+                a {
+                    text-decoration: underline;
+                    &:hover {
+                        /* filter: brightness(0) saturate(100%) invert(91%) sepia(7%) saturate(2803%) hue-rotate(224deg) brightness(85%) contrast(90%); */
+                        text-decoration: underline;
+                        opacity: 0.75;
+                    }
+                }
+            }
+        }
+        
+        .icon-large {
+            height: 150px;
+            margin: -25px;
+            margin-left: -80px;
         }
     }
 
-    .icon-large {
-        height: 150px;
-        margin: -25px;
-        margin-left: -80px;
-
-    }
+    
 }
 
 /* general styling */
