@@ -148,6 +148,23 @@ body {
         } */
     }
 
+    #feature{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 19px;
+        .feature-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: fit-content;
+            gap: 30px;
+            padding: 15px 1px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+    }
+
 }
 
 /* general styling */
@@ -185,4 +202,10 @@ p {
     font-size: 16px;
     color: #465b52;
     padding: 15px 0 20px 0;
+}
+
+/* bootstrap like */
+
+.p-1{
+    padding: 40px 80px;
 }
