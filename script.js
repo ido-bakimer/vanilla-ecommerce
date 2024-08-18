@@ -41,6 +41,20 @@ features.forEach(feature => {
     const featureBox = document.createElement('div');
     featureBox.className = 'feature-box';
 
+    // Create an img element and set its src attribute
+    const img = document.createElement('img');
+    img.src = feature.imgSrc;
+    img.alt = feature.text;
+
+    // Create a span element and set its text content and background color
+    const span = document.createElement('span');
+    span.textContent = feature.text;
+    span.style.backgroundColor = feature.color;
+
+    // Append the img and span to the featureBox div
+    featureBox.appendChild(img);
+    featureBox.appendChild(span);
+
     // Append the featureBox div to the feature section
     featureSection.appendChild(featureBox);
 });
