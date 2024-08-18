@@ -1,3 +1,51 @@
+//feature list builder arr+func
+//feature list arr-
+const features = [
+    {
+        imgSrc: "resources/features/1freeShipping.png",
+        text: "Free Shipping",
+        color: "#E6F7F9"
+    },
+    {
+        imgSrc: "resources/features/2onlineOrder.png",
+        text: "Online Order",
+        color: "#F9EBF3"
+    },
+    {
+        imgSrc: "resources/features/3SaveMoney.png",
+        text: "Save Money",
+        color: "#F0F8E4"
+    },
+    {
+        imgSrc: "resources/features/4promotion.png",
+        text: "Promotions",
+        color: "#E6F2F9"
+    },
+    {
+        imgSrc: "resources/features/5happySell.png",
+        text: "Happy Sale",
+        color: "#E7E2F6"
+    },
+    {
+        imgSrc: "resources/features/6support.png",
+        text: "24/7 Support",
+        color: "#F9EDE6"
+    }
+];
+
+//feature builder func
+const featureSection = document.getElementById('feature');
+
+features.forEach(feature => {
+    // Create a div element with the class 'feature-box'
+    const featureBox = document.createElement('div');
+    featureBox.className = 'feature-box';
+
+    // Append the featureBox div to the feature section
+    featureSection.appendChild(featureBox);
+});
+
+//hero hue change func
 const hero = document.getElementById('hero');
 let hue = 0;
 
