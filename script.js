@@ -1,3 +1,6 @@
+import { getRandomNumber, generateDummyText } from './util.js';
+
+
 //feature list builder arr+func
 //feature list arr-
 const features = [
@@ -58,6 +61,38 @@ features.forEach(feature => {
     // Append the featureBox div to the feature section
     featureSection.appendChild(featureBox);
 });
+
+//product api gen
+const productSection = document.getElementById('product');
+function constructProduct(i){
+    const productBox = document.createElement('div');
+    const img = document.createElement('img');
+    const productName = document.createElement('h3');
+    const productDesc = document.createElement('p');
+    const productPrice = document.createElement('p');
+    const baseImgLink = 'https://via.assets.so/shoe.png?id=1&q=95&w=360&h=360&fit=fill';
+
+    productBox.className = 'product-box';
+    let newId = getRandomNumber(1,100);
+    const newImgLink = baseImgLink.replace(/id=\d+/, `id=${newId}`); 
+    img.src= newImgLink;
+    productName.textContent = generateDummyText(2);
+    productDesc.textContent = generateDummyText(8);
+    productPrice.textContent = getRandomNumber(150,350) + '$';
+    
+
+    productBox.appendChild(img);
+    productBox.appendChild(productName);
+    productBox.appendChild(productDesc);
+    productBox.appendChild(productPrice);
+    productSection.appendChild(productBox);
+}
+
+// function constructProductlIST{
+ 
+// }
+
+constructProduct();
 
 //hero hue change func
 const hero = document.getElementById('hero');
