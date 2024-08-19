@@ -73,7 +73,7 @@ function constructProduct(i){
     const baseImgLink = 'https://via.assets.so/shoe.png?id=1&q=95&w=360&h=360&fit=fill';
 
     productBox.className = 'product-box';
-    let newId = getRandomNumber(1,100);
+    let newId = getRandomNumber(1,12);
     const newImgLink = baseImgLink.replace(/id=\d+/, `id=${newId}`); 
     img.src= newImgLink;
     productName.textContent = generateDummyText(2);
@@ -88,11 +88,14 @@ function constructProduct(i){
     productSection.appendChild(productBox);
 }
 
-// function constructProductlIST{
- 
-// }
+function constructProductList(productsAmount){
+ for (let i = 0; i < productsAmount; i++){
+    constructProduct();
+ }
+}
 
-constructProduct();
+// constructProduct();
+constructProductList(5);
 
 //hero hue change func
 const hero = document.getElementById('hero');
