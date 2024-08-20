@@ -23,7 +23,7 @@ export function generateDummyText(wordCount) {
         dummyText += loremIpsumWords[randomIndex] + ' ';
     }
 
-    return dummyText.trim() + '.';
+    return dummyText.trim();
 }
 
 

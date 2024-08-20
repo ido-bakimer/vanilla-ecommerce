@@ -62,28 +62,39 @@ features.forEach(feature => {
     featureSection.appendChild(featureBox);
 });
 
+function starSpan(starAmount){
+    let starString = '';
+for (let i = 0 ; i < starAmount ; i++){
+    starString += '⭐';
+}
+return starString;
+}
+
 //product api gen
-const productSection = document.getElementById('product');
+const productSection = document.getElementById('product-list');
 function constructProduct(i){
     const productBox = document.createElement('div');
     const img = document.createElement('img');
-    const productName = document.createElement('h3');
-    const productDesc = document.createElement('p');
+    const productName = document.createElement('p');
+    const productDesc = document.createElement('h4');
+    const productRating = document.createElement('span');
     const productPrice = document.createElement('p');
     const baseImgLink = 'https://via.assets.so/shoe.png?id=1&q=95&w=360&h=360&fit=fill';
 
     productBox.className = 'product-box';
     let newId = getRandomNumber(1,12);
     const newImgLink = baseImgLink.replace(/id=\d+/, `id=${newId}`); 
-    img.src= newImgLink;
-    productName.textContent = generateDummyText(2);
-    productDesc.textContent = generateDummyText(8);
-    productPrice.textContent = getRandomNumber(150,350) + '$';
     
+    img.src= newImgLink;
+    productName.textContent = generateDummyText(1);
+    productDesc.textContent = generateDummyText(3) + ' shoe';
+    productPrice.textContent = getRandomNumber(150,350) + '$';
+    productRating.textContent = starSpan(getRandomNumber(1,5));    
 
     productBox.appendChild(img);
     productBox.appendChild(productName);
     productBox.appendChild(productDesc);
+    productBox.appendChild(productRating);
     productBox.appendChild(productPrice);
     productSection.appendChild(productBox);
 }
@@ -95,7 +106,7 @@ function constructProductList(productsAmount){
 }
 
 // constructProduct();
-constructProductList(5);
+constructProductList(13);
 
 //hero hue change func
 const hero = document.getElementById('hero');
